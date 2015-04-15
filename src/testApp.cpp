@@ -120,6 +120,9 @@ void testApp::draw() {
 	//	ofSetHexColor(0x444342);
 	//	joints[i].get()->draw();
 	//}
+
+	circleMovil.draw();
+
 	ofPolyline poly;
 	//poly.addVertex(ofPoint(joints[0].get()->joint->GetAnchorA().x, joints[0].get()->joint->GetAnchorA().y) * OFX_BOX2D_SCALE);
 	//for(int i=0; i<joints.size(); i++) {
@@ -187,7 +190,7 @@ void testApp::mouseDragged(int x, int y, int button) {
 	mouseJoint[1].setTarget(rect.getTopRight()/ OFX_BOX2D_SCALE);
 	mouseJoint[2].setTarget(rect.getBottomRight()/ OFX_BOX2D_SCALE);
 	//mouseJoint[3].setTarget(ofVec2f(x / OFX_BOX2D_SCALE, y / OFX_BOX2D_SCALE));
-	mouseJoint[3].setTarget(rect.getBottomLeft() / OFX_BOX2D_SCALE));
+	mouseJoint[3].setTarget(rect.getBottomLeft() / OFX_BOX2D_SCALE);
 
 	circleJoint.setTarget(ofVec2f(x / OFX_BOX2D_SCALE, y / OFX_BOX2D_SCALE));
 }
